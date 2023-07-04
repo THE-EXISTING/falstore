@@ -1,13 +1,12 @@
-import 'package:falstore/falstore.dart';
-import 'package:faltool/faltool.dart';
+import 'package:falstore/lib.dart';
 
 /// Singleton
-class SecureStorageX {
+class SecureStorage {
   static const emptyData = '';
   final FlutterSecureStorage _storage;
-  static const SecureStorageX instance = SecureStorageX._singleton();
+  static const SecureStorage instance = SecureStorage._singleton();
 
-  const SecureStorageX._singleton(
+  const SecureStorage._singleton(
       {FlutterSecureStorage storage = const FlutterSecureStorage()})
       : _storage = storage;
 
