@@ -228,9 +228,11 @@ packages:
   faltool:
     dependency: "direct main"
     description:
-      path: "../faltool"
-      relative: true
-    source: path
+      path: "."
+      ref: develop
+      resolved-ref: "52e20cd19233b4a1fd354d8650c77bcfc6026493"
+      url: "https://github.com/THE-EXISTING/faltool.git"
+    source: git
     version: "1.0.0"
   ffi:
     dependency: transitive

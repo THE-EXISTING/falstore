@@ -10,12 +10,13 @@ dependencies:
   flutter:
     sdk: flutter
   faltool:
-    path: ../faltool
+    git:
+      url: https://github.com/THE-EXISTING/faltool.git
+      ref: develop
   flutter_lints: ^2.0.1
   flutter_secure_storage: ^8.0.0
   hive: ^2.2.3
   hive_flutter: ^1.1.0
-
 
 dev_dependencies:
   flutter_test:
