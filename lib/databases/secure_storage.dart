@@ -21,10 +21,10 @@ class SecureStorage {
     });
   }
 
-  Future<String> load({required String key, String? defaultData}) {
+  Future<String?> load({required String key, String? defaultData = emptyData}) {
     return _storage.read(key: key).then((data) {
       Log.t('Success load key: $key, data: $data from SecureStorage.');
-      return data ?? defaultData ?? emptyData;
+      return data ?? defaultData;
     });
   }
 
