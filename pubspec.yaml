@@ -13,8 +13,12 @@ dependencies:
     git:
       url: https://github.com/THE-EXISTING/faltool.git
       ref: develop
+
+  #PLATFORM: All
   flutter_lints: ^2.0.3
   flutter_secure_storage: ^9.0.0
+
+  #PLATFORM: Android, iOS, Linux, MacOS, Windows
   realm: ^1.5.0
 
 dev_dependencies:
