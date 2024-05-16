@@ -11,7 +11,7 @@ dependencies:
   faltool:
     git:
       url: https://github.com/THE-EXISTING/faltool.git
-      ref: develop
+      ref: release/V1.0.0
 
   #PLATFORM: All
   flutter_secure_storage: ^9.2.0
