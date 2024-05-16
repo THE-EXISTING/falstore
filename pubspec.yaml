@@ -1,10 +1,9 @@
 name: falstore
 description: A new Flutter package project.
-version: 1.0.0
+version: 1.0.1
 
 environment:
-  sdk: '>=2.19.3 <3.0.0'
-  flutter: ">=1.17.0"
+  sdk: '>=3.4.0 <4.0.0'
 
 dependencies:
   flutter:
@@ -12,18 +11,19 @@ dependencies:
   faltool:
     git:
       url: https://github.com/THE-EXISTING/faltool.git
-      ref: release/V1.0.0
+      ref: V1.0.1
 
   #PLATFORM: All
-  flutter_secure_storage: ^9.0.0
+  flutter_secure_storage: ^9.2.1
+  hive: ^2.2.3
 
   #PLATFORM: Android, iOS, Linux, MacOS, Windows
-  realm: ^1.5.0
+  realm: ^2.2.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  build_runner: ^2.4.6
-  flutter_lints: ^3.0.1
+  build_runner: ^2.4.10
+  flutter_lints: ^4.0.0
 
 flutter:
