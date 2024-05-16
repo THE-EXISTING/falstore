@@ -16,21 +16,21 @@ class SecureStorage {
 
   Future<void> save({required String key, required String data}) {
     return _storage.write(key: key, value: data).then((value) {
-      Log.v('Success save key: $key, data: $data to SecureStorage.');
+      Log.t('Success save key: $key, data: $data to SecureStorage.');
       return value;
     });
   }
 
-  Future<String> load({required String key, String? defaultData}) {
+  Future<String?> load({required String key, String? defaultData = emptyData}) {
     return _storage.read(key: key).then((data) {
-      Log.v('Success load key: $key, data: $data from SecureStorage.');
-      return data ?? defaultData ?? emptyData;
+      Log.t('Success load key: $key, data: $data from SecureStorage.');
+      return data ?? defaultData;
     });
   }
 
   Future<void> delete({required String key}) {
     return _storage.delete(key: key).then((value) {
-      Log.v('Success delete key: $key from SecureStorage.');
+      Log.t('Success delete key: $key from SecureStorage.');
       return value;
     });
   }
