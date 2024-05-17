@@ -1,3 +1,3 @@
 library falstore;
 
-export 'databases/secure_storage.dart';
+export 'databases/databases.dart';

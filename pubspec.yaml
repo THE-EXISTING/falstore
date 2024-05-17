@@ -1,6 +1,6 @@
 name: falstore
 description: A new Flutter package project.
-version: 1.0.1
+version: 1.0.2
 
 environment:
   sdk: '>=3.4.0 <4.0.0'
@@ -11,7 +11,7 @@ dependencies:
   faltool:
     git:
       url: https://github.com/THE-EXISTING/faltool.git
-      ref: V1.0.1
+      ref: 1.0.2
 
   #PLATFORM: All
   flutter_secure_storage: ^9.2.1
