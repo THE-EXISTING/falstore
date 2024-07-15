@@ -10,28 +10,36 @@ class SecureStorage {
       {FlutterSecureStorage storage = const FlutterSecureStorage()})
       : _storage = storage;
 
-  Future<void> deleteAll() async {
-    await _storage.deleteAll();
-  }
+  Future<void> save(String key, {required String data}) =>
+      _storage.write(key: key, value: data).then((value) {
+        Log.t('Success save key: $key, data: $data to SecureStorage.');
+        return value;
+      });
 
-  Future<void> save({required String key, required String data}) {
-    return _storage.write(key: key, value: data).then((value) {
-      Log.t('Success save key: $key, data: $data to SecureStorage.');
-      return value;
-    });
-  }
+  Future<String?> load(String key) => _storage.read(key: key).then((data) {
+        Log.t('Success load key: $key, data: $data from SecureStorage.');
+        return data;
+      });
 
-  Future<String?> load({required String key, String? defaultData = emptyData}) {
-    return _storage.read(key: key).then((data) {
-      Log.t('Success load key: $key, data: $data from SecureStorage.');
-      return data ?? defaultData;
-    });
-  }
+  Future<String> loadSafe(
+    String key, {
+    required String defaultData,
+  }) =>
+      _storage.read(key: key).then((data) {
+        Log.t('Success load key: $key, data: $data from SecureStorage.');
+        return data ?? defaultData;
+      });
 
-  Future<void> delete({required String key}) {
-    return _storage.delete(key: key).then((value) {
-      Log.t('Success delete key: $key from SecureStorage.');
-      return value;
-    });
-  }
+  Future<Map<String, String>> loadAll() => _storage.readAll().then((data) {
+        Log.t('Success load all data: $data from SecureStorage.');
+        return data;
+      });
+
+  Future<void> delete({required String key}) =>
+      _storage.delete(key: key).then((value) {
+        Log.t('Success delete key: $key from SecureStorage.');
+        return value;
+      });
+
+  Future<void> deleteAll() => _storage.deleteAll();
 }
