@@ -2,7 +2,6 @@ import 'package:falstore/lib.dart';
 
 /// Singleton
 class SecureStorage {
-  static const emptyData = '';
   final FlutterSecureStorage _storage;
   static const SecureStorage instance = SecureStorage._singleton();
 
